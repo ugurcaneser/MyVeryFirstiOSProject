@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    fileprivate func rgbCircles() -> some View {
+        return HStack{
+            Circle().foregroundColor(Color.red).frame(width: 100, height: 100, alignment: Alignment.center)
+            Circle().foregroundColor(Color.green).frame(width: 100, height: 100, alignment: Alignment.center)
+            Circle().foregroundColor(Color.blue).frame(width: 100, height: 100, alignment: Alignment.center)
+        }
+    }
+    
     var body: some View {
-        sampleVerticalView()
+        VStack{
+            rgbCircles()
+            rgbCircles()
+            rgbCircles()
+            rgbCircles()
+            rgbCircles()
+            rgbCircles()
+        }
+        
     }
     
     fileprivate func sampleHorizontalView() -> some View {
