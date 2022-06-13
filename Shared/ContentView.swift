@@ -9,8 +9,55 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, iOS!")
-            .padding()
+        sampleVerticalView()
+    }
+    
+    fileprivate func sampleHorizontalView() -> some View {
+        return HStack {
+            Spacer().frame(width: 100, alignment: Alignment.center)
+            Text("Hello, world!")
+                .padding()
+            Text("Hello, world!")
+                .padding()
+            Text("Hello, world!")
+                .padding()
+            Text("Hello, world!")
+                .padding()
+            Color.red
+            Spacer().frame(width: 100, alignment: Alignment.center)
+        }
+    }
+    
+    fileprivate func sampleVerticalView() -> some View {
+        return VStack {
+            Spacer().frame(width: 100, alignment: Alignment.center)
+            Text("Hello, world!")
+                .padding()
+            Text("Hello, world!")
+                .padding()
+            Text("Hello, world!")
+                .padding()
+            Text("Hello, world!")
+                .padding()
+            Color.red
+            Spacer().frame(width: 100, alignment: Alignment.center)
+        }
+    }
+    
+    fileprivate func sampleStackView() -> some View {
+        return ZStack {
+            Spacer().frame(width: 100, alignment: Alignment.center)
+            Text("Hello, world!")
+                .padding()
+            Text("Hello, world!")
+                .padding()
+            Text("Hello, world!")
+                .padding()
+            Text("Hello, world!")
+                .padding()
+            Color.red
+            Spacer().frame(width: 100, alignment: Alignment.center)
+        }
     }
 }
 
